@@ -5,6 +5,7 @@
 		<techLevel>Industrial</techLevel>
 		<generateCommonality>0.1</generateCommonality>
 		<recipeMaker>
+			<researchPrerequisite>ATP_Weapons</researchPrerequisite>
 			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
 			<recipeUsers Inherit='False'>
 				<li>TableMachining</li>
@@ -184,9 +185,13 @@
 		<techLevel>Spacer</techLevel>
 		<generateCommonality>0.05</generateCommonality>
 		<recipeMaker>
+			<researchPrerequisite>ATP_Charge</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
+			<recipeUsers Inherit='False'>
+				<li>FabricationBench</li>
+			</recipeUsers>
 		</recipeMaker>
 		<costList>
 			<ComponentSpacer>1</ComponentSpacer>
@@ -383,9 +388,13 @@
 		<techLevel>Spacer</techLevel>
 		<generateCommonality>0.05</generateCommonality>
 		<recipeMaker>
+			<researchPrerequisite>ATP_Charge</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
+			<recipeUsers Inherit='False'>
+				<li>FabricationBench</li>
+			</recipeUsers>
 		</recipeMaker>
 		<costList>
 			<ComponentSpacer>1</ComponentSpacer>
