@@ -226,9 +226,9 @@
 			<li Class="MVCF.Comps.CompProperties_VerbGiver">
 				<verbProps>
 					<li>
-						<label>Gun</label>
-						<visualLabel>mini-turret charge gun</visualLabel>
-						<description>A simple automatic charge gun made to be strapped onto an animal.</description>
+						<label>Blaster</label>
+						<visualLabel>mini-turret charge blaster</visualLabel>
+						<description>A simple automatic charge blaster made to be strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
@@ -425,9 +425,9 @@
 			<li Class="MVCF.Comps.CompProperties_VerbGiver">
 				<verbProps>
 					<li>
-						<label>Gun</label>
-						<visualLabel>mini-turret charge gun</visualLabel>
-						<description>A simple automatic charge gun made to be strapped onto an animal.</description>
+						<label>Blaster</label>
+						<visualLabel>mini-turret charge blaster</visualLabel>
+						<description>A simple automatic charge blaster made to be strapped onto an animal.</description>
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
@@ -441,6 +441,135 @@
 						</comps>
 					</li>
 				</verbProps>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	
+	<!-- Grenades (Small) -->
+	<ThingDef ParentName="AnimalTurretBase">
+		<defName>ATP_Apparel_SmallGrenades</defName>
+		<label>small animal grenade belt</label>
+		<description>A grenade belt designed to be carried by small animals.</description>
+		<tickerType>Normal</tickerType>
+		<costList>
+		  <Steel>20</Steel>
+		  <Chemfuel>80</Chemfuel>
+		</costList>
+		<graphicData>
+			<texPath>Grenades_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<Mass>1.5</Mass>
+			<Flammability>0.2</Flammability>
+			<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<label>Grenade</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<defaultProjectile>Proj_GrenadeFrag</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>12.9</range>
+				<forcedMissRadius>2.9</forcedMissRadius>
+				<hasStandardCommand>true</hasStandardCommand>
+				<soundCast>ThrowGrenade</soundCast>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbGiver">
+				<verbProps>
+					<li>
+						<label>Grenade</label>
+						<visualLabel>grenades</visualLabel>
+						<description>A grenade belt strapped onto an animal.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+								<graphic>
+									<texPath>Grenades_Small</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+								</graphic>
+								<drawScale>3</drawScale>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Grenades (Large) -->
+	<ThingDef ParentName="AnimalTurretBase">
+		<defName>ATP_Apparel_LargeGrenades</defName>
+		<label>large animal grenade belt</label>
+		<description>A grenade belt designed to be carried by large animals.</description>
+		<tickerType>Normal</tickerType>
+		<costList>
+		  <Steel>20</Steel>
+		  <Chemfuel>80</Chemfuel>
+		</costList>
+		<graphicData>
+			<texPath>Grenades_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<Mass>1.5</Mass>
+			<Flammability>0.2</Flammability>
+			<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<label>Grenade</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<defaultProjectile>Proj_GrenadeFrag</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>12.9</range>
+				<forcedMissRadius>2.9</forcedMissRadius>
+				<hasStandardCommand>true</hasStandardCommand>
+				<soundCast>ThrowGrenade</soundCast>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbGiver">
+				<verbProps>
+					<li>
+						<label>Grenade</label>
+						<visualLabel>grenades</visualLabel>
+						<description>A grenade belt strapped onto an animal.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+								<graphic>
+									<texPath>Grenades_Large</texPath>
+									<graphicClass>Graphic_Single</graphicClass>
+								</graphic>
+								<drawScale>0.8</drawScale>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 			</li>
 		</comps>
 	</ThingDef>
