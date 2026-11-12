@@ -4,24 +4,50 @@
 	<author>flangopink, ogam</author>
 	<supportedVersions>
 		<li>1.4</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<packageId>flangopink.animalturretpacks</packageId>
 	<description>Turrets packs, but for animals!</description>
-	<modDependencies>
-        <li>
-			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
-			<displayName>Vanilla Expanded Framework</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
-		</li>
-		<li>
-			<packageId>Dylan.AnimalGear</packageId>
-			<displayName>Animal Gear</displayName>
-			<steamWorkshopUrl>steam://url/CommunityFilePage/1541438907</steamWorkshopUrl>
-			<downloadUrl>steam://url/CommunityFilePage/1541438907</downloadUrl>
-		</li>
-	</modDependencies>
-	<loadAfter>
-		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
-		<li>Dylan.AnimalGear</li>
-	</loadAfter>
+	<modDependenciesByVersion>
+		<v1.4>
+			<li>
+				<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+				<displayName>Vanilla Expanded Framework</displayName>
+				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
+			</li>
+			<li>
+				<packageId>Dylan.AnimalGear</packageId>
+				<displayName>Animal Gear</displayName>
+				<steamWorkshopUrl>steam://url/CommunityFilePage/1541438907</steamWorkshopUrl>
+				<downloadUrl>steam://url/CommunityFilePage/1541438907</downloadUrl>
+			</li>
+		</v1.4>
+		<v1.6>
+			<li>
+				<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+				<displayName>Vanilla Expanded Framework</displayName>
+				<steamWorkshopUrl>steam://url/CommunityFilePage/2023507013</steamWorkshopUrl>
+			</li>
+			<li>
+				<packageId>Ingendum.AnimalApparelFramework</packageId>
+				<displayName>Animal Apparel: Framework</displayName>
+				<steamWorkshopUrl>steam://url/CommunityFilePage/3513825850</steamWorkshopUrl>
+			</li>
+		</v1.6>
+	</modDependenciesByVersion>
+	<loadAfterByVersion>
+		<v1.4>
+			<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+			<li>Dylan.AnimalGear</li>
+		</v1.4>
+		<v1.6>
+			<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+			<li>Ingendum.AnimalApparelFramework</li>
+		</v1.6>
+	</loadAfterByVersion>
+	<incompatibleWithByVersion>
+		<v1.6>
+			<li>Dylan.AnimalGear</li>
+		</v1.6>
+	</incompatibleWithByVersion>
 </ModMetaData>
